@@ -61,24 +61,24 @@ public class SortingSearchingHashMap {
         stateCapitalsMap.put("Wisconsin", "Madison");
         stateCapitalsMap.put("Wyoming", "Cheyenne");
 
-        // Display the content of the HashMap
-        System.out.println("Content of the HashMap:");
-        for (String state : stateCapitalsMap.keySet()) {
-            System.out.println(state + " - " + stateCapitalsMap.get(state));
-        }
+    // Display the content of the HashMap
+    System.out.println("Content of the HashMap:"); // Print a message indicating the start of HashMap content display
+    for (String state : stateCapitalsMap.keySet()) { // Iterate over each key (state) in the HashMap
+        System.out.println(state + " - " + stateCapitalsMap.get(state)); // Print the state-capital pair
+    }
 
-        // Sort the HashMap using TreeMap
-        TreeMap<String, String> sortedStateCapitalsMap = new TreeMap<>(stateCapitalsMap);
+    // Sort the HashMap using TreeMap
+    TreeMap<String, String> sortedStateCapitalsMap = new TreeMap<>(stateCapitalsMap);
 
-        // Prompt the user to enter a state and display the capital
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a state: ");
-        String userState = scanner.nextLine();
-        String capital = sortedStateCapitalsMap.get(userState);
-        if (capital != null) {
-            System.out.println("Capital of " + userState + ": " + capital);
-        } else {
-            System.out.println("State not found.");
-        }
+    // Prompt the user to enter a state and display the capital
+    Scanner scanner = new Scanner(System.in); // Create a new Scanner object to read user input
+    System.out.print("Enter a state: "); // Prompt the user to enter a state
+    String userState = scanner.nextLine(); // Read the user's input for the state
+    String capital = sortedStateCapitalsMap.get(userState); // Retrieve the capital corresponding to the user's input state from the sorted TreeMap
+    if (capital != null) { // Check if the capital is found
+        System.out.println("Capital of " + userState + ": " + capital); // Display the capital corresponding to the user's input state
+    } else {
+        System.out.println("State not found."); // Display a message indicating that the state was not found
+    }
     }
 }

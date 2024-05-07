@@ -78,13 +78,17 @@ public class SortingArrays {
         bubbleSortByCapital(stateCapitals);
 
         // Prompt the user to enter answers for all state capitals
-        Scanner scanner = new Scanner(System.in);
-        int correctCount = 0;
+        Scanner scanner = new Scanner(System.in); // Create a new Scanner object for user input
+        int correctCount = 0; // Initialize a variable to keep track of the number of correct answers
+        // Loop through each state in the stateCapitals array
         for (String[] state : stateCapitals) {
+            // Display a prompt asking the user to enter the capital of the current state
             System.out.print("Enter the capital of " + state[0] + ": ");
+            // Read the user's input for the capital of the current state
             String userCapital = scanner.nextLine();
+            // Check if the user's input matches the capital of the current state (case-insensitive)
             if (userCapital.equalsIgnoreCase(state[1])) {
-                correctCount++;
+                correctCount++; // Increment the correctCount if the answer is correct
             }
         }
 
@@ -98,20 +102,21 @@ public class SortingArrays {
      */
 
     private static void bubbleSortByCapital(String[][] array) {
-        boolean swapped;
+        boolean swapped; // Flag to indicate if any elements were swapped in the current iteration
         // Continue looping until no more swaps are made
         do {
-            swapped = false;
+            swapped = false; // Assume no elements will be swapped in this iteration
             // Iterate through the array
             for (int i = 0; i < array.length - 1; i++) {
                 // Compare two capitals and swap if necessary
                 if (array[i][1].compareToIgnoreCase(array[i + 1][1]) > 0) {
-                    String[] temp = array[i];
-                    array[i] = array[i + 1];
-                    array[i + 1] = temp;
-                    swapped = true; // Set swapped to true to continue looping
+                    String[] temp = array[i]; // Temporary variable to hold the current state and capital
+                    array[i] = array[i + 1]; // Swap the current state and capital with the next state and capital
+                    array[i + 1] = temp; // Set the next state and capital to the temporary variable
+                    swapped = true; // Set swapped to true to indicate that a swap occurred
                 }
             }
         } while (swapped); // Repeat the loop if a swap was made in this iteration
     }
+    
 }
