@@ -3,12 +3,15 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 /**
- * This program demonstrates sorting and searching a HashMap of state capitals.
+ * This program demonstrates sorting and searching a HashMap of U.S. state capitals.
+ * It initializes a HashMap with the state-capital pairs, displays the contents of the HashMap,
+ * sorts the HashMap by state name using a TreeMap, prompts the user to enter a state,
+ * and displays the capital of the entered state if it exists in the sorted map.
  */
 
 public class SortingSearchingHashMap {
     public static void main(String[] args) {
-        // Define the HashMap of state capitals
+        // Define and populate the HashMap of state capitals
         HashMap<String, String> stateCapitalsMap = new HashMap<>();
         stateCapitalsMap.put("Alabama", "Montgomery");
         stateCapitalsMap.put("Alaska", "Juneau");
@@ -62,9 +65,11 @@ public class SortingSearchingHashMap {
         stateCapitalsMap.put("Wyoming", "Cheyenne");
 
     // Display the content of the HashMap
-    System.out.println("Content of the HashMap:"); // Print a message indicating the start of HashMap content display
-    for (String state : stateCapitalsMap.keySet()) { // Iterate over each key (state) in the HashMap
-        System.out.println(state + " - " + stateCapitalsMap.get(state)); // Print the state-capital pair
+    System.out.println("Content of the HashMap:"); 
+    // Iterate over each key (state) in the HashMap
+    for (String state : stateCapitalsMap.keySet()) {
+        // Print the state-capital pair
+        System.out.println(state + " - " + stateCapitalsMap.get(state));
     }
 
     // Sort the HashMap using TreeMap

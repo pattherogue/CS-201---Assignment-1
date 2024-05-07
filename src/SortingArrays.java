@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 /**
- * This class implements a program that asks the user to enter a capital for a U.S. state.
- * It then reports whether the user input is correct. The program stores the 50 states and their
- * capitals in a two-dimensional array, displays the current contents of the array, and uses
- * a bubble sort to sort the content by capital. It then prompts the user to enter answers for
- * all state capitals and displays the total correct count. The user's answer is not case-sensitive.
+ * This class implements a program that quizzes the user on U.S. state capitals.
+ * It stores the states and their capitals in a two-dimensional array, displays the
+ * current contents of the array, sorts the content by capital using bubble sort,
+ * prompts the user to enter answers for all state capitals, and displays the total
+ * correct count. The user's answers are not case-sensitive.
  */
 
 public class SortingArrays {
@@ -70,7 +70,9 @@ public class SortingArrays {
 
         // Display the current contents of the array
         System.out.println("Current contents of the array:");
+        // Iterate over each state-capital pair in the stateCapitals array
         for (String[] state : stateCapitals) {
+             // Print the state name followed by a hyphen and the capital
             System.out.println(state[0] + " - " + state[1]);
         }
 
