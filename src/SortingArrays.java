@@ -99,16 +99,19 @@ public class SortingArrays {
 
     private static void bubbleSortByCapital(String[][] array) {
         boolean swapped;
+        // Continue looping until no more swaps are made
         do {
             swapped = false;
+            // Iterate through the array
             for (int i = 0; i < array.length - 1; i++) {
+                // Compare two capitals and swap if necessary
                 if (array[i][1].compareToIgnoreCase(array[i + 1][1]) > 0) {
                     String[] temp = array[i];
                     array[i] = array[i + 1];
                     array[i + 1] = temp;
-                    swapped = true;
+                    swapped = true; // Set swapped to true to continue looping
                 }
             }
-        } while (swapped);
+        } while (swapped); // Repeat the loop if a swap was made in this iteration
     }
 }
