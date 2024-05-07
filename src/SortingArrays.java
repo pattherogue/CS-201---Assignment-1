@@ -1,6 +1,18 @@
 import java.util.Scanner;
 
+/**
+ * This class implements a program that asks the user to enter a capital for a U.S. state.
+ * It then reports whether the user input is correct. The program stores the 50 states and their
+ * capitals in a two-dimensional array, displays the current contents of the array, and uses
+ * a bubble sort to sort the content by capital. It then prompts the user to enter answers for
+ * all state capitals and displays the total correct count. The user's answer is not case-sensitive.
+ */
+
 public class SortingArrays {
+    /**
+     * The main method of the program.
+     * @param args The command-line arguments (not used in this program).
+     */
     public static void main(String[] args) {
         // Define the array of state capitals
         String[][] stateCapitals = {
@@ -79,6 +91,11 @@ public class SortingArrays {
         // Display the total correct count
         System.out.println("Total correct count: " + correctCount);
     }
+
+    /**
+     * Sorts the 2D array by the second element of each sub-array (the capital) using bubble sort.
+     * @param array The 2D array to be sorted.
+     */
 
     private static void bubbleSortByCapital(String[][] array) {
         boolean swapped;
