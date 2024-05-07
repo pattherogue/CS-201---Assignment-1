@@ -2,6 +2,10 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.TreeMap;
 
+/**
+ * This program demonstrates sorting and searching a HashMap of state capitals.
+ */
+
 public class SortingSearchingHashMap {
     public static void main(String[] args) {
         // Define the HashMap of state capitals
